@@ -8,7 +8,7 @@ export default function App() {
 
   const [driver, setDriver] = useState(drivers[0]);
 
-  const sortDriver = () => {
+  const sortearPiloto = () => {
     const random = Math.floor(Math.random() * drivers.length);
     setDriver(drivers[random]);
   };
@@ -17,7 +17,7 @@ export default function App() {
     <PaperProvider>
       <View style={styles.container}>
         <Driver driver={driver}></Driver>
-        <Button mode="contained" onPress={sortDriver}>
+        <Button mode="contained" onPress={sortearPiloto}>
           Sortear Piloto
         </Button>
       </View>
